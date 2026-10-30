@@ -1,0 +1,262 @@
+{
+"skeleton": { "hash": "VjXZSyDq2Aw", "spine": "4.3.26", "images": null, "audio": null },
+"bones": [
+	{ "name": "root", "scaleX": 0.65, "scaleY": 0.65 },
+	{ "name": "dg1", "parent": "root" },
+	{ "name": "dg2", "parent": "root" },
+	{ "name": "dg3", "parent": "root" },
+	{ "name": "dg4", "parent": "root" }
+],
+"slots": [
+	{ "name": "dg1", "bone": "dg1" },
+	{ "name": "dg2", "bone": "dg2" },
+	{ "name": "dg3", "bone": "dg3" },
+	{ "name": "dg4", "bone": "dg4" }
+],
+"skins": [
+	{
+		"name": "default",
+		"attachments": {
+			"dg1": {
+				"FX/jd_dg1/1_00043": { "width": 512, "height": 414 },
+				"FX/jd_dg1/1_00044": { "width": 512, "height": 414 },
+				"FX/jd_dg1/1_00046": { "width": 512, "height": 414 },
+				"FX/jd_dg1/1_00048": { "width": 512, "height": 414 },
+				"FX/jd_dg1/1_00050": { "width": 512, "height": 414 }
+			},
+			"dg2": {
+				"FX/jd_dg1/1_00062": { "width": 512, "height": 414 },
+				"FX/jd_dg1/1_00064": { "width": 512, "height": 414 },
+				"FX/jd_dg1/1_00066": { "width": 512, "height": 414 },
+				"FX/jd_dg1/1_00068": { "width": 512, "height": 414 },
+				"FX/jd_dg1/1_00070": { "width": 512, "height": 414 }
+			},
+			"dg3": {
+				"FX/jd_dg1/1_00014": { "width": 512, "height": 414 },
+				"FX/jd_dg1/1_00016": { "width": 512, "height": 414 },
+				"FX/jd_dg1/1_00018": { "width": 512, "height": 414 },
+				"FX/jd_dg1/1_00020": { "width": 512, "height": 414 },
+				"FX/jd_dg1/1_00022": { "width": 512, "height": 414 }
+			},
+			"dg4": {
+				"FX/jd_dg1/df01": { "width": 320, "height": 61 },
+				"FX/jd_dg1/df02": { "width": 320, "height": 61 },
+				"FX/jd_dg1/df03": { "width": 320, "height": 61 },
+				"FX/jd_dg1/df04": { "width": 320, "height": 61 },
+				"FX/jd_dg1/df05": { "width": 320, "height": 61 },
+				"FX/jd_dg1/df06": { "width": 320, "height": 61 }
+			}
+		}
+	}
+],
+"events": {
+	"hit_end": {},
+	"hit_start": {}
+},
+"animations": {
+	"attack1": {
+		"slots": {
+			"dg4": {
+				"attachment": [
+					{ "time": 0.1, "name": "FX/jd_dg1/df01" },
+					{ "time": 0.13333334, "name": "FX/jd_dg1/df02" },
+					{ "time": 0.16666667, "name": "FX/jd_dg1/df03" },
+					{ "time": 0.2, "name": "FX/jd_dg1/df04" },
+					{ "time": 0.23333333, "name": "FX/jd_dg1/df05" },
+					{ "time": 0.2666667, "name": "FX/jd_dg1/df06" },
+					{ "time": 0.3 }
+				]
+			}
+		},
+		"bones": {
+			"dg4": {
+				"translate": [
+					{ "x": 55.15518, "y": 120.65213 }
+				],
+				"scale": [
+					{ "x": 1.2, "y": 2 }
+				]
+			}
+		},
+		"events": [
+			{ "time": 0.1, "name": "hit_start" },
+			{ "time": 0.23333333, "name": "hit_end" }
+		]
+	},
+	"attack2": {
+		"slots": {
+			"dg2": {
+				"attachment": [
+					{ "time": 0.03333333, "name": "FX/jd_dg1/1_00062" },
+					{ "time": 0.06666667, "name": "FX/jd_dg1/1_00064" },
+					{ "time": 0.1, "name": "FX/jd_dg1/1_00066" },
+					{ "time": 0.13333334, "name": "FX/jd_dg1/1_00068" },
+					{ "time": 0.16666667, "name": "FX/jd_dg1/1_00070" },
+					{ "time": 0.2 }
+				]
+			}
+		},
+		"bones": {
+			"dg2": {
+				"rotate": [
+					{ "value": -12.226167 }
+				],
+				"translate": [
+					{ "x": -22.43154, "y": 79.26524 }
+				],
+				"scale": [
+					{ "x": 1.0895926, "y": 1.537626 }
+				],
+				"shear": [
+					{ "x": 9.776416, "y": -30.46569 }
+				]
+			}
+		},
+		"events": [
+			{ "time": 0.03333333, "name": "hit_start" },
+			{ "time": 0.13333334, "name": "hit_end" }
+		]
+	},
+	"attack3": {
+		"slots": {
+			"dg1": {
+				"attachment": [
+					{ "time": 0.16666667, "name": "FX/jd_dg1/1_00043" },
+					{ "time": 0.2, "name": "FX/jd_dg1/1_00044" },
+					{ "time": 0.23333333, "name": "FX/jd_dg1/1_00046" },
+					{ "time": 0.2666667, "name": "FX/jd_dg1/1_00048" },
+					{ "time": 0.3, "name": "FX/jd_dg1/1_00050" },
+					{ "time": 0.3333333 }
+				]
+			}
+		},
+		"bones": {
+			"dg1": {
+				"translate": [
+					{ "time": 0.16666667, "x": -24.123215, "y": 106.83087 }
+				],
+				"scale": [
+					{ "time": 0.16666667, "x": 1.301022, "y": 1.6425717 }
+				],
+				"shear": [
+					{ "time": 0.16666667, "y": 7.816501 }
+				]
+			}
+		},
+		"events": [
+			{ "time": 0.16666667, "name": "hit_start" },
+			{ "time": 0.2666667, "name": "hit_end" }
+		]
+	},
+	"attack4": {
+		"slots": {
+			"dg1": {
+				"attachment": [
+					{ "time": 0.03333333, "name": "FX/jd_dg1/1_00043" },
+					{ "time": 0.06666667, "name": "FX/jd_dg1/1_00044" },
+					{ "time": 0.1, "name": "FX/jd_dg1/1_00046" },
+					{ "time": 0.13333334, "name": "FX/jd_dg1/1_00048" },
+					{ "time": 0.16666667, "name": "FX/jd_dg1/1_00050" },
+					{ "time": 0.2 }
+				]
+			}
+		},
+		"bones": {
+			"dg1": {
+				"rotate": [
+					{ "value": 138.90424 }
+				],
+				"translate": [
+					{ "x": 23.6308, "y": 105.19798 }
+				],
+				"scale": [
+					{ "x": -1, "y": 1.400694 }
+				],
+				"shear": [
+					{ "x": -6.43988, "y": -32.21203 }
+				]
+			}
+		},
+		"events": [
+			{ "time": 0.03333333, "name": "hit_start" },
+			{ "time": 0.13333334, "name": "hit_end" }
+		]
+	},
+	"jump_attack1": {
+		"slots": {
+			"dg2": {
+				"attachment": [
+					{ "time": 0.03333333, "name": "FX/jd_dg1/1_00062" },
+					{ "time": 0.06666667, "name": "FX/jd_dg1/1_00064" },
+					{ "time": 0.1, "name": "FX/jd_dg1/1_00066" },
+					{ "time": 0.13333334, "name": "FX/jd_dg1/1_00068" },
+					{ "time": 0.16666667, "name": "FX/jd_dg1/1_00070" },
+					{ "time": 0.2 }
+				]
+			}
+		},
+		"bones": {
+			"dg2": {
+				"rotate": [
+					{ "value": -12.226167 }
+				],
+				"translate": [
+					{ "x": -24.154745, "y": 68.92685 }
+				],
+				"scale": [
+					{ "x": 1.031394, "y": 1.537626 }
+				],
+				"shear": [
+					{ "x": 9.776416, "y": -32.69245 }
+				]
+			}
+		},
+		"events": [
+			{ "time": 0.03333333, "name": "hit_start" },
+			{ "time": 0.13333334, "name": "hit_end" }
+		]
+	},
+	"step_attack1": {
+		"slots": {
+			"dg3": {
+				"attachment": [
+					{ "time": 0.3, "name": "FX/jd_dg1/1_00014" },
+					{ "time": 0.3333333, "name": "FX/jd_dg1/1_00016" },
+					{ "time": 0.3666667, "name": "FX/jd_dg1/1_00018" },
+					{ "time": 0.4, "name": "FX/jd_dg1/1_00020" },
+					{ "time": 0.4333333, "name": "FX/jd_dg1/1_00022" },
+					{ "time": 0.4666667 }
+				]
+			}
+		},
+		"bones": {
+			"dg2": {
+				"rotate": [
+					{ "value": -12.226167 }
+				],
+				"translate": [
+					{ "x": -25.877676, "y": 39.63451 }
+				],
+				"scale": [
+					{ "x": 1.031394, "y": 1.537626 }
+				],
+				"shear": [
+					{ "x": 9.776416, "y": -32.05038 }
+				]
+			},
+			"dg3": {
+				"translate": [
+					{ "x": 24.12437, "y": 87.9817 }
+				],
+				"scale": [
+					{ "x": 1.3, "y": 1.3 }
+				]
+			}
+		},
+		"events": [
+			{ "time": 0.3, "name": "hit_start" },
+			{ "time": 0.4, "name": "hit_end" }
+		]
+	}
+}
+}

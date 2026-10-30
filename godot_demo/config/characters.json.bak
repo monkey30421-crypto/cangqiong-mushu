@@ -1,0 +1,90 @@
+{
+  "version": 1,
+  "revision": 9,
+  "rows": [
+    {
+      "id": 1,
+      "name": "主角",
+      "modelResource": "res://assets/action_library/catalog.json",
+      "x": 60,
+      "h": 130,
+      "shadowScalePercent": 100,
+      "monsterType": null,
+      "drops": []
+    },
+    {
+      "id": 101,
+      "name": "书海史莱姆",
+      "modelResource": "res://assets/character/art/monsters/101-wind-slime/monster_101-data.tres",
+      "x": 70,
+      "h": 70,
+      "shadowScalePercent": 100,
+      "monsterType": "normal",
+      "hitPushbackDistancePx": 40,
+      "canBeLaunched": true,
+      "drops": [
+        {
+          "itemId": "1001",
+          "probability": 1,
+          "minCount": 1,
+          "maxCount": 100
+        },
+        {
+          "itemId": "2001",
+          "probability": 0.1,
+          "minCount": 1,
+          "maxCount": 1
+        },
+        {
+          "itemId": "2002",
+          "probability": 0.12,
+          "minCount": 1,
+          "maxCount": 1
+        },
+        {
+          "itemId": "2003",
+          "probability": 0.1,
+          "minCount": 1,
+          "maxCount": 1
+        }
+      ]
+    },
+    {
+      "id": 102,
+      "name": "精英怪",
+      "modelResource": "res://assets/character/art/monsters/101-wind-slime/monster_101-data.tres",
+      "x": 145.56,
+      "h": 150,
+      "shadowScalePercent": 100,
+      "monsterType": "elite",
+      "hitPushbackDistancePx": 40,
+      "canBeLaunched": true,
+      "drops": []
+    },
+    {
+      "id": 103,
+      "name": "变异怪",
+      "modelResource": "res://assets/character/art/monsters/101-wind-slime/monster_101-data.tres",
+      "x": 145.56,
+      "h": 150,
+      "shadowScalePercent": 100,
+      "monsterType": "mutation",
+      "hitPushbackDistancePx": 40,
+      "canBeLaunched": false,
+      "drops": []
+    },
+    {
+      "id": 104,
+      "name": "首领",
+      "modelResource": "res://assets/character/art/monsters/gray-shell-branch-beast.png",
+      "x": 213.48,
+      "h": 220,
+      "shadowScalePercent": 100,
+      "monsterType": "boss",
+      "hitPushbackDistancePx": 0,
+      "canBeLaunched": false,
+      "drops": []
+    }
+  ],
+  "updatedAt": "2026-10-24T08:16:44.187Z"
+}

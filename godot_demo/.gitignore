@@ -1,0 +1,15 @@
+# macOS
+.DS_Store
+
+# Godot-generated import cache
+.godot/
+*.import
+
+# Local build, test, and export artifacts
+tmp/
+art_candidates/
+bin/
+
+# Editor and dependency caches
+node_modules/
+.cache/

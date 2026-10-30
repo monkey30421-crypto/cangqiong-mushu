@@ -1,0 +1,393 @@
+{
+  "version": 1,
+  "revision": 7,
+  "monsters": [
+    {
+      "characterId": 101,
+      "actions": [
+        {
+          "key": "idle",
+          "animation": {
+            "library": "res://assets/character/art/monsters/101-wind-slime/monster_101-data.tres",
+            "name": "idle"
+          },
+          "upper": null,
+          "lower": null
+        },
+        {
+          "key": "move_front",
+          "animation": {
+            "library": "res://assets/character/art/monsters/101-wind-slime/monster_101-data.tres",
+            "name": "move_front"
+          },
+          "upper": null,
+          "lower": null
+        },
+        {
+          "key": "move_back",
+          "animation": {
+            "library": "res://assets/character/art/monsters/101-wind-slime/monster_101-data.tres",
+            "name": "move_back"
+          },
+          "upper": null,
+          "lower": null
+        },
+        {
+          "key": "attack1",
+          "animation": {
+            "library": "res://assets/character/art/monsters/101-wind-slime/monster_101-data.tres",
+            "name": "attack_1"
+          },
+          "upper": {
+            "file": "skilleffect_jd_dg1.json",
+            "animation": "attack1"
+          },
+          "lower": null
+        },
+        {
+          "key": "attack2",
+          "animation": {
+            "library": "res://assets/character/art/monsters/101-wind-slime/monster_101-data.tres",
+            "name": "attack_1"
+          },
+          "upper": {
+            "file": "skilleffect_jd_dg1.json",
+            "animation": "attack3"
+          },
+          "lower": null
+        },
+        {
+          "key": "skill1",
+          "animation": null,
+          "upper": null,
+          "lower": null
+        },
+        {
+          "key": "skill2",
+          "animation": null,
+          "upper": null,
+          "lower": null
+        },
+        {
+          "key": "hurt",
+          "animation": {
+            "library": "res://assets/character/art/monsters/101-wind-slime/monster_101-data.tres",
+            "name": "hit"
+          },
+          "upper": null,
+          "lower": null
+        },
+        {
+          "key": "floated",
+          "animation": {
+            "library": "res://assets/character/art/monsters/101-wind-slime/monster_101-data.tres",
+            "name": "floated"
+          },
+          "upper": null,
+          "lower": null
+        },
+        {
+          "key": "down_fly",
+          "animation": null,
+          "upper": null,
+          "lower": null
+        },
+        {
+          "key": "lying_loop",
+          "animation": {
+            "library": "res://assets/character/art/monsters/101-wind-slime/monster_101-data.tres",
+            "name": "die_floated"
+          },
+          "upper": null,
+          "lower": null
+        },
+        {
+          "key": "down",
+          "animation": {
+            "library": "res://assets/character/art/monsters/101-wind-slime/monster_101-data.tres",
+            "name": "die"
+          },
+          "upper": null,
+          "lower": null
+        },
+        {
+          "key": "getup",
+          "animation": {
+            "library": "res://assets/character/art/monsters/101-wind-slime/monster_101-data.tres",
+            "name": "die_up"
+          },
+          "upper": null,
+          "lower": null
+        }
+      ]
+    },
+    {
+      "characterId": 102,
+      "actions": [
+        {
+          "key": "idle",
+          "animation": null,
+          "upper": null,
+          "lower": null
+        },
+        {
+          "key": "move_front",
+          "animation": null,
+          "upper": null,
+          "lower": null
+        },
+        {
+          "key": "move_back",
+          "animation": null,
+          "upper": null,
+          "lower": null
+        },
+        {
+          "key": "attack1",
+          "animation": null,
+          "upper": null,
+          "lower": null
+        },
+        {
+          "key": "attack2",
+          "animation": null,
+          "upper": null,
+          "lower": null
+        },
+        {
+          "key": "skill1",
+          "animation": null,
+          "upper": null,
+          "lower": null
+        },
+        {
+          "key": "skill2",
+          "animation": null,
+          "upper": null,
+          "lower": null
+        },
+        {
+          "key": "hurt",
+          "animation": null,
+          "upper": null,
+          "lower": null
+        },
+        {
+          "key": "floated",
+          "animation": {
+            "library": "res://assets/character/art/monsters/101-wind-slime/monster_101-data.tres",
+            "name": "floated"
+          },
+          "upper": null,
+          "lower": null
+        },
+        {
+          "key": "down_fly",
+          "animation": null,
+          "upper": null,
+          "lower": null
+        },
+        {
+          "key": "lying_loop",
+          "animation": null,
+          "upper": null,
+          "lower": null
+        },
+        {
+          "key": "down",
+          "animation": null,
+          "upper": null,
+          "lower": null
+        },
+        {
+          "key": "getup",
+          "animation": {
+            "library": "res://assets/character/art/monsters/101-wind-slime/monster_101-data.tres",
+            "name": "die_up"
+          },
+          "upper": null,
+          "lower": null
+        }
+      ]
+    },
+    {
+      "characterId": 103,
+      "actions": [
+        {
+          "key": "idle",
+          "animation": null,
+          "upper": null,
+          "lower": null
+        },
+        {
+          "key": "move_front",
+          "animation": null,
+          "upper": null,
+          "lower": null
+        },
+        {
+          "key": "move_back",
+          "animation": null,
+          "upper": null,
+          "lower": null
+        },
+        {
+          "key": "attack1",
+          "animation": null,
+          "upper": null,
+          "lower": null
+        },
+        {
+          "key": "attack2",
+          "animation": null,
+          "upper": null,
+          "lower": null
+        },
+        {
+          "key": "skill1",
+          "animation": null,
+          "upper": null,
+          "lower": null
+        },
+        {
+          "key": "skill2",
+          "animation": null,
+          "upper": null,
+          "lower": null
+        },
+        {
+          "key": "hurt",
+          "animation": null,
+          "upper": null,
+          "lower": null
+        },
+        {
+          "key": "floated",
+          "animation": {
+            "library": "res://assets/character/art/monsters/101-wind-slime/monster_101-data.tres",
+            "name": "floated"
+          },
+          "upper": null,
+          "lower": null
+        },
+        {
+          "key": "down_fly",
+          "animation": null,
+          "upper": null,
+          "lower": null
+        },
+        {
+          "key": "lying_loop",
+          "animation": null,
+          "upper": null,
+          "lower": null
+        },
+        {
+          "key": "down",
+          "animation": null,
+          "upper": null,
+          "lower": null
+        },
+        {
+          "key": "getup",
+          "animation": {
+            "library": "res://assets/character/art/monsters/101-wind-slime/monster_101-data.tres",
+            "name": "die_up"
+          },
+          "upper": null,
+          "lower": null
+        }
+      ]
+    },
+    {
+      "characterId": 104,
+      "actions": [
+        {
+          "key": "idle",
+          "animation": null,
+          "upper": null,
+          "lower": null
+        },
+        {
+          "key": "move_front",
+          "animation": null,
+          "upper": null,
+          "lower": null
+        },
+        {
+          "key": "move_back",
+          "animation": null,
+          "upper": null,
+          "lower": null
+        },
+        {
+          "key": "attack1",
+          "animation": null,
+          "upper": null,
+          "lower": null
+        },
+        {
+          "key": "attack2",
+          "animation": null,
+          "upper": null,
+          "lower": null
+        },
+        {
+          "key": "skill1",
+          "animation": null,
+          "upper": null,
+          "lower": null
+        },
+        {
+          "key": "skill2",
+          "animation": null,
+          "upper": null,
+          "lower": null
+        },
+        {
+          "key": "hurt",
+          "animation": null,
+          "upper": null,
+          "lower": null
+        },
+        {
+          "key": "floated",
+          "animation": {
+            "library": "res://assets/character/art/player_animations/Character-data.tres",
+            "name": "floated"
+          },
+          "upper": null,
+          "lower": null
+        },
+        {
+          "key": "down_fly",
+          "animation": null,
+          "upper": null,
+          "lower": null
+        },
+        {
+          "key": "lying_loop",
+          "animation": null,
+          "upper": null,
+          "lower": null
+        },
+        {
+          "key": "down",
+          "animation": null,
+          "upper": null,
+          "lower": null
+        },
+        {
+          "key": "getup",
+          "animation": {
+            "library": "res://assets/character/art/player_animations/Character-data.tres",
+            "name": "die_Up"
+          },
+          "upper": null,
+          "lower": null
+        }
+      ]
+    }
+  ],
+  "updatedAt": "2026-10-28T13:31:39.729Z"
+}

@@ -1,0 +1,1119 @@
+[gd_scene format=3 uid="uid://djyuicobjbs0a"]
+
+[ext_resource type="Script" uid="uid://d4e5i43gtxm51" path="res://main.gd" id="1_script"]
+[ext_resource type="Texture2D" path="res://assets/character/art/player.png" id="2_player"]
+[ext_resource type="SpineSkeletonDataResource" path="res://assets/character/art/player_animations/Character-data.tres" id="22_player_spine"]
+[ext_resource type="Texture2D" path="res://assets/scene/maps/backgrounds/main_city/maincity-foreground.png" id="3_city_foreground"]
+[ext_resource type="Texture2D" path="res://assets/scene/maps/backgrounds/dungeon_floor1/layers/tree-sea-shared-background.jpg" id="4_dungeon"]
+[ext_resource type="Texture2D" uid="uid://devbl3xrk8rma" path="res://assets/ui/login/login-screen.png" id="5_login"]
+[ext_resource type="Texture2D" uid="uid://3ac2fbpau4dd" path="res://assets/ui/status/player-status-frame.png" id="6_status_frame"]
+[ext_resource type="Texture2D" uid="uid://kth7u042o5ng" path="res://assets/ui/hud/hud-currency.png" id="7_hud_currency"]
+[ext_resource type="Texture2D" uid="uid://dfawwpcvtfext" path="res://assets/ui/hud/hud-joystick.png" id="8_hud_joystick"]
+[ext_resource type="Texture2D" uid="uid://stcpi35hqe5i" path="res://assets/ui/hud/hud-status-button.png" id="9_hud_status"]
+[ext_resource type="Texture2D" uid="uid://ykbjsion8jms" path="res://assets/ui/hud/hud-backpack-button.png" id="10_hud_backpack"]
+[ext_resource type="Texture2D" uid="uid://dih6ro7d6smfi" path="res://assets/ui/hud/hud-skill1.png" id="11_hud_skill1"]
+[ext_resource type="Texture2D" uid="uid://ceaduk8vkoyca" path="res://assets/ui/hud/hud-skill2.png" id="12_hud_skill2"]
+[ext_resource type="Texture2D" uid="uid://7r2uvd50joas" path="res://assets/ui/hud/hud-skill3.png" id="13_hud_skill3"]
+[ext_resource type="Texture2D" uid="uid://w0naw7m2mxac" path="res://assets/ui/hud/hud-skill4.png" id="14_hud_skill4"]
+[ext_resource type="Texture2D" uid="uid://d0uthpghu6efk" path="res://assets/ui/hud/hud-jump.png" id="15_hud_jump"]
+[ext_resource type="Texture2D" uid="uid://gsb2v33pi5gl" path="res://assets/ui/hud/hud-dodge.png" id="16_hud_dodge"]
+[ext_resource type="Texture2D" uid="uid://2ign3cv87126" path="res://assets/ui/hud/hud-attack.png" id="17_hud_attack"]
+[ext_resource type="Texture2D" path="res://assets/scene/maps/backgrounds/main_city/maincity-midground.png" id="18_city_midground"]
+[ext_resource type="Texture2D" path="res://assets/scene/maps/backgrounds/main_city/maincity-background.jpg" id="19_city_background"]
+[ext_resource type="Texture2D" path="res://assets/scene/maps/backgrounds/dungeon_floor1/layers/tree-sea-start-midground.png" id="20_dungeon_midground"]
+[ext_resource type="Texture2D" path="res://assets/scene/maps/backgrounds/dungeon_floor1/layers/tree-sea-start-foreground.png" id="21_dungeon_foreground"]
+[ext_resource type="SpineSkeletonDataResource" path="res://assets/scene/effects/altar_tree/jitanshu_m-data.tres" id="23_altar_tree_spine"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleLoginTransparent"]
+
+[sub_resource type="StyleBoxFlat" id="StyleHudPanel"]
+bg_color = Color(0.075, 0.06, 0.037, 0.95)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.63, 0.43, 0.18, 1)
+corner_radius_top_left = 18
+corner_radius_top_right = 18
+corner_radius_bottom_right = 18
+corner_radius_bottom_left = 18
+shadow_color = Color(0, 0, 0, 0.55)
+shadow_size = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleNamingInput"]
+content_margin_left = 16.0
+content_margin_right = 16.0
+bg_color = Color(0.025, 0.035, 0.025, 0.92)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.79, 0.64, 0.34, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleCirclePressed"]
+bg_color = Color(0.28, 0.19, 0.07, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(1, 0.78, 0.36, 1)
+corner_radius_top_left = 64
+corner_radius_top_right = 64
+corner_radius_bottom_right = 64
+corner_radius_bottom_left = 64
+
+[sub_resource type="StyleBoxFlat" id="StyleCircleHover"]
+bg_color = Color(0.17, 0.13, 0.065, 0.98)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.91, 0.68, 0.31, 1)
+corner_radius_top_left = 64
+corner_radius_top_right = 64
+corner_radius_bottom_right = 64
+corner_radius_bottom_left = 64
+shadow_color = Color(0.96, 0.61, 0.18, 0.2)
+shadow_size = 7
+
+[sub_resource type="StyleBoxFlat" id="StylePortraitBack"]
+bg_color = Color(0.055, 0.14, 0.115, 0.96)
+corner_radius_top_left = 58
+corner_radius_top_right = 58
+corner_radius_bottom_right = 58
+corner_radius_bottom_left = 58
+
+[sub_resource type="AtlasTexture" id="AtlasPlayerPortrait"]
+atlas = ExtResource("2_player")
+region = Rect2(8, 0, 77, 80)
+
+[sub_resource type="StyleBoxFlat" id="StyleHealthFill"]
+bg_color = Color(0.27, 0.67, 0.12, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.55, 0.83, 0.2, 1)
+corner_radius_top_left = 7
+corner_radius_top_right = 7
+corner_radius_bottom_right = 7
+corner_radius_bottom_left = 7
+
+[sub_resource type="StyleBoxFlat" id="StyleManaFill"]
+bg_color = Color(0.12, 0.48, 0.76, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.26, 0.7, 0.94, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleJoystickCenterMask"]
+bg_color = Color(0.105, 0.1, 0.064, 1)
+corner_radius_top_left = 28
+corner_radius_top_right = 28
+corner_radius_bottom_right = 28
+corner_radius_bottom_left = 28
+
+[sub_resource type="StyleBoxFlat" id="StyleJoystickBase"]
+bg_color = Color(0.07, 0.065, 0.048, 0.74)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.49, 0.37, 0.2, 0.94)
+corner_radius_top_left = 70
+corner_radius_top_right = 70
+corner_radius_bottom_right = 70
+corner_radius_bottom_left = 70
+shadow_color = Color(0, 0, 0, 0.52)
+shadow_size = 7
+
+[sub_resource type="StyleBoxFlat" id="StyleJoystickKnob"]
+bg_color = Color(0.14, 0.115, 0.075, 0.98)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.64, 0.47, 0.24, 1)
+corner_radius_top_left = 28
+corner_radius_top_right = 28
+corner_radius_bottom_right = 28
+corner_radius_bottom_left = 28
+shadow_color = Color(0, 0, 0, 0.58)
+shadow_size = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleModalPanel"]
+bg_color = Color(0.055, 0.065, 0.045, 0.985)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.78, 0.56, 0.24, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+shadow_color = Color(0, 0, 0, 0.72)
+shadow_size = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleDungeonListEntry"]
+bg_color = Color(0.09, 0.115, 0.08, 0.98)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.78, 0.56, 0.24, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_size = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleDungeonListEntryPressed"]
+bg_color = Color(0.2, 0.18, 0.08, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(1, 0.85, 0.48, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleDungeonListEntryHover"]
+bg_color = Color(0.15, 0.17, 0.105, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.94, 0.75, 0.36, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_color = Color(0.94, 0.68, 0.25, 0.22)
+shadow_size = 10
+
+[node name="Main" type="Node2D" unique_id=2081061557]
+script = ExtResource("1_script")
+
+[node name="CityBackground" type="Node2D" parent="." unique_id=214805515]
+visible = false
+z_index = -10
+
+[node name="BackgroundLayer" type="Node2D" parent="CityBackground"]
+
+[node name="Source" type="Sprite2D" parent="CityBackground/BackgroundLayer"]
+texture_filter = 1
+position = Vector2(2700, 600)
+texture = ExtResource("19_city_background")
+region_enabled = true
+region_rect = Rect2(0, 400, 5400, 1200)
+
+[node name="MidgroundLayer" type="Node2D" parent="CityBackground"]
+z_index = 1
+
+[node name="Source" type="Sprite2D" parent="CityBackground/MidgroundLayer"]
+texture_filter = 1
+position = Vector2(2700, 600)
+texture = ExtResource("18_city_midground")
+region_enabled = true
+region_rect = Rect2(0, 400, 5400, 1200)
+
+[node name="ForegroundLayer" type="Node2D" parent="CityBackground"]
+z_index = 2
+
+[node name="Source" type="Sprite2D" parent="CityBackground/ForegroundLayer"]
+texture_filter = 1
+position = Vector2(2700, 600)
+texture = ExtResource("3_city_foreground")
+region_enabled = true
+region_rect = Rect2(0, 400, 5400, 1200)
+
+[node name="PortalEffect" type="AnimatedSprite2D" parent="CityBackground/ForegroundLayer" unique_id=1278682408]
+z_index = 2
+texture_filter = 2
+position = Vector2(5107, 544)
+scale = Vector2(1.5, 1.5)
+
+[node name="DungeonBackground" type="Node2D" parent="." unique_id=1299499824]
+visible = false
+z_index = -10
+
+[node name="Scene" type="Sprite2D" parent="DungeonBackground" unique_id=267248535]
+texture_filter = 1
+position = Vector2(2700, 600)
+texture = ExtResource("4_dungeon")
+region_enabled = true
+region_rect = Rect2(0, 400, 5400, 1200)
+
+[node name="Midground" type="Sprite2D" parent="DungeonBackground"]
+texture_filter = 1
+position = Vector2(1200, 600)
+texture = ExtResource("20_dungeon_midground")
+region_enabled = true
+region_rect = Rect2(0, 400, 2400, 1200)
+
+[node name="Foreground" type="Sprite2D" parent="DungeonBackground"]
+texture_filter = 1
+position = Vector2(1200, 600)
+texture = ExtResource("21_dungeon_foreground")
+region_enabled = true
+region_rect = Rect2(0, 400, 2400, 1200)
+
+[node name="AltarTree" type="SpineSprite" parent="DungeonBackground"]
+texture_filter = 1
+z_index = 1
+skeleton_data_res = ExtResource("23_altar_tree_spine")
+
+[node name="Traveler" type="SpineSprite" parent="." unique_id=321892268]
+ skeleton_data_res = ExtResource("22_player_spine")
+visible = false
+texture_filter = 2
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=1529874912]
+
+[node name="LoginScreen" type="Control" parent="UI" unique_id=1871727010]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1800.0
+offset_bottom = 750.0
+
+[node name="Background" type="TextureRect" parent="UI/LoginScreen" unique_id=871721830]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("5_login")
+expand_mode = 1
+
+[node name="Card" type="Control" parent="UI/LoginScreen" unique_id=1977983215]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+
+[node name="Form" type="Control" parent="UI/LoginScreen/Card" unique_id=808543806]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+
+[node name="AccountName" type="LineEdit" parent="UI/LoginScreen/Card/Form" unique_id=478679839]
+layout_mode = 0
+offset_left = 811.0
+offset_top = 532.0
+offset_right = 1016.0
+offset_bottom = 564.0
+theme_override_colors/font_color = Color(0.89, 0.79, 0.61, 1)
+theme_override_colors/caret_color = Color(0.95, 0.69, 0.29, 1)
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = SubResource("StyleLoginTransparent")
+theme_override_styles/read_only = SubResource("StyleLoginTransparent")
+theme_override_styles/focus = SubResource("StyleLoginTransparent")
+caret_blink = true
+
+[node name="Password" type="LineEdit" parent="UI/LoginScreen/Card/Form" unique_id=963548331]
+layout_mode = 0
+offset_left = 811.0
+offset_top = 572.0
+offset_right = 1016.0
+offset_bottom = 604.0
+theme_override_colors/font_color = Color(0.89, 0.79, 0.61, 1)
+theme_override_colors/caret_color = Color(0.95, 0.69, 0.29, 1)
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = SubResource("StyleLoginTransparent")
+theme_override_styles/read_only = SubResource("StyleLoginTransparent")
+theme_override_styles/focus = SubResource("StyleLoginTransparent")
+caret_blink = true
+secret = true
+
+[node name="LoginButton" type="Button" parent="UI/LoginScreen/Card/Form" unique_id=1539199343]
+layout_mode = 0
+offset_left = 794.0
+offset_top = 613.0
+offset_right = 1006.0
+offset_bottom = 663.0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+flat = true
+
+[node name="Status" type="Label" parent="UI/LoginScreen/Card/Form" unique_id=1494732729]
+layout_mode = 0
+offset_left = 650.0
+offset_top = 393.0
+offset_right = 1150.0
+offset_bottom = 423.0
+theme_override_colors/font_color = Color(0.98, 0.7, 0.35, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.9)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_font_sizes/font_size = 18
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="NamingScreen" type="Control" parent="UI" unique_id=1830463463]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1800.0
+offset_bottom = 750.0
+
+[node name="Backdrop" type="ColorRect" parent="UI/NamingScreen" unique_id=691791916]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.015, 0.025, 0.018, 0.94)
+
+[node name="Frame" type="Panel" parent="UI/NamingScreen" unique_id=1029578720]
+layout_mode = 0
+offset_left = 550.0
+offset_top = 155.0
+offset_right = 1250.0
+offset_bottom = 595.0
+theme_override_styles/panel = SubResource("StyleHudPanel")
+
+[node name="Prompt" type="Label" parent="UI/NamingScreen/Frame" unique_id=1923819111]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 55.0
+offset_right = 640.0
+offset_bottom = 110.0
+theme_override_colors/font_color = Color(0.94, 0.84, 0.61, 1)
+theme_override_font_sizes/font_size = 32
+text = "请告诉我你的名字"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="NameInput" type="LineEdit" parent="UI/NamingScreen/Frame" unique_id=681011959]
+layout_mode = 0
+offset_left = 100.0
+offset_top = 160.0
+offset_right = 600.0
+offset_bottom = 220.0
+theme_override_colors/font_color = Color(0.94, 0.9, 0.78, 1)
+theme_override_colors/caret_color = Color(1, 0.76, 0.3, 1)
+theme_override_font_sizes/font_size = 28
+theme_override_styles/normal = SubResource("StyleNamingInput")
+theme_override_styles/focus = SubResource("StyleNamingInput")
+placeholder_text = "输入角色名"
+alignment = 1
+caret_blink = true
+
+[node name="Warning" type="Label" parent="UI/NamingScreen/Frame" unique_id=1168913698]
+layout_mode = 0
+offset_left = 100.0
+offset_top = 250.0
+offset_right = 600.0
+offset_bottom = 285.0
+theme_override_colors/font_color = Color(1, 0.36, 0.25, 1)
+theme_override_font_sizes/font_size = 22
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ConfirmButton" type="Button" parent="UI/NamingScreen/Frame" unique_id=1814267091]
+layout_mode = 0
+offset_left = 210.0
+offset_top = 310.0
+offset_right = 490.0
+offset_bottom = 380.0
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0.96, 0.86, 0.65, 1)
+theme_override_colors/font_hover_color = Color(1, 0.94, 0.76, 1)
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleHudPanel")
+theme_override_styles/pressed = SubResource("StyleCirclePressed")
+theme_override_styles/hover = SubResource("StyleCircleHover")
+text = "确定"
+
+[node name="GameHUD" type="Control" parent="UI" unique_id=408835062]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1800.0
+offset_bottom = 750.0
+mouse_filter = 1
+
+[node name="PlayerStatus" type="Control" parent="UI/GameHUD" unique_id=1730576973]
+anchors_preset = 0
+offset_left = 3.6
+offset_top = 2.4
+offset_right = 3.6
+offset_bottom = 2.4
+scale = Vector2(0.8, 0.8)
+mouse_filter = 2
+
+[node name="PortraitBack" type="Panel" parent="UI/GameHUD/PlayerStatus" unique_id=982220100]
+layout_mode = 0
+offset_left = 57.0
+offset_top = 30.0
+offset_right = 170.0
+offset_bottom = 144.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StylePortraitBack")
+
+[node name="Portrait" type="TextureRect" parent="UI/GameHUD/PlayerStatus" unique_id=711790313]
+layout_mode = 0
+offset_left = 59.0
+offset_top = 32.0
+offset_right = 168.0
+offset_bottom = 142.0
+mouse_filter = 2
+texture = SubResource("AtlasPlayerPortrait")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="HealthBar" type="ProgressBar" parent="UI/GameHUD/PlayerStatus" unique_id=1154689669]
+layout_mode = 0
+offset_left = 226.0
+offset_top = 54.0
+offset_right = 590.0
+offset_bottom = 83.0
+mouse_filter = 2
+theme_override_styles/background = SubResource("StyleLoginTransparent")
+theme_override_styles/fill = SubResource("StyleHealthFill")
+value = 100.0
+show_percentage = false
+
+[node name="ManaBar" type="ProgressBar" parent="UI/GameHUD/PlayerStatus" unique_id=1426666321]
+layout_mode = 0
+offset_left = 227.0
+offset_top = 100.0
+offset_right = 537.0
+offset_bottom = 125.0
+mouse_filter = 2
+theme_override_styles/background = SubResource("StyleLoginTransparent")
+theme_override_styles/fill = SubResource("StyleManaFill")
+value = 100.0
+show_percentage = false
+
+[node name="StatusFrame" type="TextureRect" parent="UI/GameHUD/PlayerStatus" unique_id=500698806]
+texture_filter = 1
+layout_mode = 0
+offset_left = 18.0
+offset_top = 12.0
+offset_right = 618.0
+offset_bottom = 180.0
+mouse_filter = 2
+texture = ExtResource("6_status_frame")
+expand_mode = 1
+
+[node name="PlayerName" type="Label" parent="UI/GameHUD/PlayerStatus" unique_id=1429025719]
+layout_mode = 0
+offset_left = 226.0
+offset_top = 25.0
+offset_right = 590.0
+offset_bottom = 51.0
+theme_override_colors/font_color = Color(0.96, 0.84, 0.58, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.95)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_font_sizes/font_size = 18
+text = "刻轮者"
+vertical_alignment = 1
+
+[node name="HealthValue" type="Label" parent="UI/GameHUD/PlayerStatus" unique_id=1169908488]
+layout_mode = 0
+offset_left = 226.0
+offset_top = 54.0
+offset_right = 590.0
+offset_bottom = 83.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.95)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_font_sizes/font_size = 16
+text = "100 / 100"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ResourceBar" type="TextureRect" parent="UI/GameHUD" unique_id=1824196688]
+texture_filter = 1
+layout_mode = 0
+offset_left = 1475.0
+offset_top = 50.0
+offset_right = 1710.0
+offset_bottom = 103.0
+mouse_filter = 2
+texture = ExtResource("7_hud_currency")
+expand_mode = 1
+
+[node name="AmberIcon" type="Label" parent="UI/GameHUD/ResourceBar" unique_id=2059190390]
+visible = false
+layout_mode = 0
+offset_left = 15.0
+offset_top = 8.0
+offset_right = 51.0
+offset_bottom = 50.0
+theme_override_colors/font_color = Color(1, 0.63, 0.12, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.9)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_font_sizes/font_size = 28
+text = "◆"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AmberAmount" type="Label" parent="UI/GameHUD/ResourceBar" unique_id=429877932]
+visible = false
+layout_mode = 0
+offset_left = 51.0
+offset_top = 10.0
+offset_right = 151.0
+offset_bottom = 48.0
+theme_override_colors/font_color = Color(0.96, 0.86, 0.64, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.9)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 2
+theme_override_font_sizes/font_size = 21
+text = "12,480"
+vertical_alignment = 1
+
+[node name="Divider" type="ColorRect" parent="UI/GameHUD/ResourceBar" unique_id=791990768]
+visible = false
+layout_mode = 0
+offset_left = 160.0
+offset_top = 12.0
+offset_right = 162.0
+offset_bottom = 46.0
+mouse_filter = 2
+color = Color(0.45, 0.33, 0.18, 0.8)
+
+[node name="LeafIcon" type="Label" parent="UI/GameHUD/ResourceBar" unique_id=1485743126]
+visible = false
+layout_mode = 0
+offset_left = 170.0
+offset_top = 8.0
+offset_right = 206.0
+offset_bottom = 50.0
+theme_override_colors/font_color = Color(0.57, 0.77, 0.22, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.9)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_font_sizes/font_size = 28
+text = "◆"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LeafAmount" type="Label" parent="UI/GameHUD/ResourceBar" unique_id=2052463926]
+visible = false
+layout_mode = 0
+offset_left = 211.0
+offset_top = 10.0
+offset_right = 310.0
+offset_bottom = 48.0
+theme_override_colors/font_color = Color(0.96, 0.86, 0.64, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.9)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 2
+theme_override_font_sizes/font_size = 21
+text = "320"
+vertical_alignment = 1
+
+[node name="Joystick" type="Control" parent="UI/GameHUD" unique_id=839940408]
+anchors_preset = 0
+offset_left = 55.0
+offset_top = 587.0
+offset_right = 201.0
+offset_bottom = 731.0
+mouse_default_cursor_shape = 2
+
+[node name="Art" type="TextureRect" parent="UI/GameHUD/Joystick" unique_id=1253122851]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("8_hud_joystick")
+expand_mode = 1
+
+[node name="CenterMask" type="Panel" parent="UI/GameHUD/Joystick" unique_id=322314226]
+layout_mode = 0
+offset_left = 45.0
+offset_top = 41.0
+offset_right = 101.0
+offset_bottom = 97.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleJoystickCenterMask")
+
+[node name="Base" type="Panel" parent="UI/GameHUD/Joystick" unique_id=669926897]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleJoystickBase")
+
+[node name="DirectionMark" type="Label" parent="UI/GameHUD/Joystick" unique_id=2013345670]
+visible = false
+layout_mode = 0
+offset_left = 24.0
+offset_top = 24.0
+offset_right = 116.0
+offset_bottom = 116.0
+theme_override_colors/font_color = Color(0.67, 0.54, 0.3, 0.58)
+theme_override_font_sizes/font_size = 44
+text = "+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Knob" type="Panel" parent="UI/GameHUD/Joystick" unique_id=174444244]
+layout_mode = 0
+offset_left = 49.0
+offset_top = 45.0
+offset_right = 97.0
+offset_bottom = 93.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleJoystickKnob")
+
+[node name="StatusButton" type="Button" parent="UI/GameHUD" unique_id=502814227]
+layout_mode = 0
+offset_left = 197.0
+offset_top = 619.0
+offset_right = 280.0
+offset_bottom = 713.0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0.69, 0.87, 0.38, 1)
+theme_override_colors/font_pressed_color = Color(1, 0.9, 0.55, 1)
+theme_override_colors/font_hover_color = Color(0.82, 1, 0.51, 1)
+theme_override_font_sizes/font_size = 15
+theme_override_styles/normal = SubResource("StyleLoginTransparent")
+theme_override_styles/pressed = SubResource("StyleLoginTransparent")
+theme_override_styles/hover = SubResource("StyleLoginTransparent")
+theme_override_styles/focus = SubResource("StyleLoginTransparent")
+icon = ExtResource("9_hud_status")
+flat = true
+expand_icon = true
+
+[node name="BackpackButton" type="Button" parent="UI/GameHUD" unique_id=1959231297]
+layout_mode = 0
+offset_left = 278.0
+offset_top = 619.0
+offset_right = 363.0
+offset_bottom = 713.0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0.91, 0.72, 0.34, 1)
+theme_override_colors/font_pressed_color = Color(1, 0.92, 0.61, 1)
+theme_override_colors/font_hover_color = Color(1, 0.87, 0.48, 1)
+theme_override_font_sizes/font_size = 15
+theme_override_styles/normal = SubResource("StyleLoginTransparent")
+theme_override_styles/pressed = SubResource("StyleLoginTransparent")
+theme_override_styles/hover = SubResource("StyleLoginTransparent")
+theme_override_styles/focus = SubResource("StyleLoginTransparent")
+icon = ExtResource("10_hud_backpack")
+flat = true
+expand_icon = true
+
+[node name="ActionCluster" type="Control" parent="UI/GameHUD" unique_id=143519001]
+anchors_preset = 0
+offset_left = 1320.0
+offset_top = 400.0
+offset_right = 1800.0
+offset_bottom = 750.0
+mouse_filter = 1
+
+[node name="Skill1Button" type="Button" parent="UI/GameHUD/ActionCluster" unique_id=1249689830]
+layout_mode = 0
+offset_left = 63.0
+offset_top = 235.0
+offset_right = 142.0
+offset_bottom = 329.0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(1, 0.54, 0.2, 1)
+theme_override_font_sizes/font_size = 13
+theme_override_styles/normal = SubResource("StyleLoginTransparent")
+theme_override_styles/pressed = SubResource("StyleLoginTransparent")
+theme_override_styles/hover = SubResource("StyleLoginTransparent")
+theme_override_styles/focus = SubResource("StyleLoginTransparent")
+icon = ExtResource("11_hud_skill1")
+flat = true
+
+[node name="Skill2Button" type="Button" parent="UI/GameHUD/ActionCluster" unique_id=1234457740]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 163.0
+offset_right = 141.0
+offset_bottom = 261.0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0.33, 0.78, 1, 1)
+theme_override_font_sizes/font_size = 13
+theme_override_styles/normal = SubResource("StyleLoginTransparent")
+theme_override_styles/pressed = SubResource("StyleLoginTransparent")
+theme_override_styles/hover = SubResource("StyleLoginTransparent")
+theme_override_styles/focus = SubResource("StyleLoginTransparent")
+icon = ExtResource("12_hud_skill2")
+flat = true
+
+[node name="Skill3Button" type="Button" parent="UI/GameHUD/ActionCluster" unique_id=1033522396]
+layout_mode = 0
+offset_left = 115.0
+offset_top = 100.0
+offset_right = 188.0
+offset_bottom = 193.0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0.55, 0.88, 0.27, 1)
+theme_override_font_sizes/font_size = 13
+theme_override_styles/normal = SubResource("StyleLoginTransparent")
+theme_override_styles/pressed = SubResource("StyleLoginTransparent")
+theme_override_styles/hover = SubResource("StyleLoginTransparent")
+theme_override_styles/focus = SubResource("StyleLoginTransparent")
+icon = ExtResource("13_hud_skill3")
+flat = true
+
+[node name="Skill4Button" type="Button" parent="UI/GameHUD/ActionCluster" unique_id=1297329775]
+layout_mode = 0
+offset_left = 186.0
+offset_top = 92.0
+offset_right = 264.0
+offset_bottom = 192.0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0.76, 0.48, 1, 1)
+theme_override_font_sizes/font_size = 13
+theme_override_styles/normal = SubResource("StyleLoginTransparent")
+theme_override_styles/pressed = SubResource("StyleLoginTransparent")
+theme_override_styles/hover = SubResource("StyleLoginTransparent")
+theme_override_styles/focus = SubResource("StyleLoginTransparent")
+icon = ExtResource("14_hud_skill4")
+flat = true
+
+[node name="JumpButton" type="Button" parent="UI/GameHUD/ActionCluster" unique_id=1864747021]
+layout_mode = 0
+offset_left = 262.0
+offset_top = 98.0
+offset_right = 340.0
+offset_bottom = 193.0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0.96, 0.86, 0.6, 1)
+theme_override_font_sizes/font_size = 14
+theme_override_styles/normal = SubResource("StyleLoginTransparent")
+theme_override_styles/pressed = SubResource("StyleLoginTransparent")
+theme_override_styles/hover = SubResource("StyleLoginTransparent")
+theme_override_styles/focus = SubResource("StyleLoginTransparent")
+icon = ExtResource("15_hud_jump")
+flat = true
+
+[node name="DodgeButton" type="Button" parent="UI/GameHUD/ActionCluster" unique_id=424562383]
+layout_mode = 0
+offset_left = 308.0
+offset_top = 165.0
+offset_right = 393.0
+offset_bottom = 261.0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0.74, 0.87, 1, 1)
+theme_override_font_sizes/font_size = 14
+theme_override_styles/normal = SubResource("StyleLoginTransparent")
+theme_override_styles/pressed = SubResource("StyleLoginTransparent")
+theme_override_styles/hover = SubResource("StyleLoginTransparent")
+theme_override_styles/focus = SubResource("StyleLoginTransparent")
+icon = ExtResource("16_hud_dodge")
+flat = true
+
+[node name="AttackButton" type="Button" parent="UI/GameHUD/ActionCluster" unique_id=177737959]
+layout_mode = 0
+offset_left = 151.0
+offset_top = 168.0
+offset_right = 301.0
+offset_bottom = 336.0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(1, 0.69, 0.28, 1)
+theme_override_colors/font_pressed_color = Color(1, 0.93, 0.65, 1)
+theme_override_colors/font_hover_color = Color(1, 0.83, 0.45, 1)
+theme_override_font_sizes/font_size = 21
+theme_override_styles/normal = SubResource("StyleLoginTransparent")
+theme_override_styles/pressed = SubResource("StyleLoginTransparent")
+theme_override_styles/hover = SubResource("StyleLoginTransparent")
+theme_override_styles/focus = SubResource("StyleLoginTransparent")
+icon = ExtResource("17_hud_attack")
+flat = true
+
+[node name="DungeonMenuButton" type="Button" parent="UI/GameHUD" unique_id=673606103]
+visible = false
+layout_mode = 0
+offset_left = 1708.0
+offset_top = 26.0
+offset_right = 1782.0
+offset_bottom = 88.0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0.95, 0.83, 0.58, 1)
+theme_override_font_sizes/font_size = 17
+theme_override_styles/normal = SubResource("StyleHudPanel")
+theme_override_styles/pressed = SubResource("StyleCirclePressed")
+theme_override_styles/hover = SubResource("StyleCircleHover")
+text = "菜单"
+
+[node name="InteractButton" type="Button" parent="UI/GameHUD" unique_id=1986651686]
+visible = false
+layout_mode = 0
+offset_left = 1170.0
+offset_top = 620.0
+offset_right = 1310.0
+offset_bottom = 690.0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0.98, 0.86, 0.55, 1)
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleHudPanel")
+theme_override_styles/pressed = SubResource("StyleCirclePressed")
+theme_override_styles/hover = SubResource("StyleCircleHover")
+text = "交互"
+
+[node name="ModalDim" type="ColorRect" parent="UI/GameHUD" unique_id=1507852518]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.015, 0.02, 0.012, 0.64)
+
+[node name="Modal" type="Panel" parent="UI/GameHUD" unique_id=1908391047]
+visible = false
+layout_mode = 0
+offset_left = 320.0
+offset_top = 60.0
+offset_right = 1480.0
+offset_bottom = 690.0
+theme_override_styles/panel = SubResource("StyleModalPanel")
+
+[node name="Title" type="Label" parent="UI/GameHUD/Modal" unique_id=61399659]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 22.0
+offset_right = 1120.0
+offset_bottom = 72.0
+theme_override_colors/font_color = Color(0.96, 0.78, 0.4, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.9)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_font_sizes/font_size = 28
+text = "玩家状态"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Body" type="Label" parent="UI/GameHUD/Modal" unique_id=654214540]
+visible = false
+layout_mode = 0
+offset_left = 70.0
+offset_top = 110.0
+offset_right = 1090.0
+offset_bottom = 520.0
+theme_override_colors/font_color = Color(0.86, 0.82, 0.67, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.8)
+theme_override_constants/line_spacing = 10
+theme_override_constants/shadow_offset_y = 1
+theme_override_font_sizes/font_size = 22
+text = "角色：刻轮者
+生命：100 / 100
+能量：100 / 100
+所在区域：初枝集"
+
+[node name="StatusContent" type="Control" parent="UI/GameHUD/Modal" unique_id=1339275487]
+visible = false
+anchors_preset = 0
+offset_left = 34.0
+offset_top = 86.0
+offset_right = 1126.0
+offset_bottom = 534.0
+mouse_filter = 2
+
+[node name="PreviewFrame" type="Panel" parent="UI/GameHUD/Modal/StatusContent" unique_id=1811745026]
+layout_mode = 0
+offset_right = 300.0
+offset_bottom = 448.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleHudPanel")
+
+[node name="NameLabel" type="Label" parent="UI/GameHUD/Modal/StatusContent/PreviewFrame" unique_id=293215096]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 18.0
+offset_right = 280.0
+offset_bottom = 52.0
+theme_override_colors/font_color = Color(0.95, 0.83, 0.58, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.8)
+theme_override_constants/shadow_offset_y = 1
+theme_override_font_sizes/font_size = 22
+text = "苍穹行者01"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SummaryLabel" type="Label" parent="UI/GameHUD/Modal/StatusContent/PreviewFrame" unique_id=1130105948]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 318.0
+offset_right = 276.0
+offset_bottom = 426.0
+theme_override_colors/font_color = Color(0.84, 0.81, 0.69, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.76)
+theme_override_constants/line_spacing = 8
+theme_override_font_sizes/font_size = 20
+text = "区域：初枝集
+生命：100 / 100
+灵蕴：100 / 100"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PreviewPlayer" type="SpineSprite" parent="UI/GameHUD/Modal/StatusContent/PreviewFrame" unique_id=66293373]
+ skeleton_data_res = ExtResource("22_player_spine")
+position = Vector2(150, 238)
+
+[node name="AttributesFrame" type="Panel" parent="UI/GameHUD/Modal/StatusContent" unique_id=1761091837]
+layout_mode = 0
+offset_left = 330.0
+offset_right = 1092.0
+offset_bottom = 448.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleHudPanel")
+
+[node name="AttributesTitle" type="Label" parent="UI/GameHUD/Modal/StatusContent/AttributesFrame" unique_id=1978883281]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 16.0
+offset_right = 734.0
+offset_bottom = 50.0
+theme_override_colors/font_color = Color(0.94, 0.8, 0.45, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.84)
+theme_override_constants/shadow_offset_y = 1
+theme_override_font_sizes/font_size = 22
+text = "已确认属性"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LeftAttributes" type="Label" parent="UI/GameHUD/Modal/StatusContent/AttributesFrame" unique_id=450570084]
+layout_mode = 0
+offset_left = 34.0
+offset_top = 72.0
+offset_right = 360.0
+offset_bottom = 414.0
+theme_override_colors/font_color = Color(0.88, 0.84, 0.71, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.76)
+theme_override_constants/line_spacing = 10
+theme_override_font_sizes/font_size = 21
+text = "种族：人族"
+vertical_alignment = 1
+
+[node name="RightAttributes" type="Label" parent="UI/GameHUD/Modal/StatusContent/AttributesFrame" unique_id=24112710]
+layout_mode = 0
+offset_left = 402.0
+offset_top = 72.0
+offset_right = 728.0
+offset_bottom = 414.0
+theme_override_colors/font_color = Color(0.88, 0.84, 0.71, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.76)
+theme_override_constants/line_spacing = 10
+theme_override_font_sizes/font_size = 21
+text = "移动速度：100.00%"
+vertical_alignment = 1
+
+[node name="DungeonSelectionList" type="Control" parent="UI/GameHUD/Modal" unique_id=52072033]
+visible = false
+anchors_preset = 0
+offset_left = 130.0
+offset_top = 108.0
+offset_right = 1030.0
+offset_bottom = 500.0
+mouse_filter = 2
+
+[node name="FloorOneButton" type="Button" parent="UI/GameHUD/Modal/DungeonSelectionList" unique_id=1311403561]
+layout_mode = 0
+offset_right = 900.0
+offset_bottom = 184.0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0.97, 0.87, 0.62, 1)
+theme_override_colors/font_pressed_color = Color(1, 0.95, 0.77, 1)
+theme_override_colors/font_hover_color = Color(1, 0.93, 0.73, 1)
+theme_override_constants/outline_size = 1
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleDungeonListEntry")
+theme_override_styles/pressed = SubResource("StyleDungeonListEntryPressed")
+theme_override_styles/hover = SubResource("StyleDungeonListEntryHover")
+text = "第一层
+年轮树海"
+
+[node name="CloseButton" type="Button" parent="UI/GameHUD/Modal" unique_id=152818810]
+layout_mode = 0
+offset_left = 630.0
+offset_top = 554.0
+offset_right = 810.0
+offset_bottom = 608.0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0.95, 0.83, 0.58, 1)
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleHudPanel")
+theme_override_styles/pressed = SubResource("StyleCirclePressed")
+theme_override_styles/hover = SubResource("StyleCircleHover")
+text = "关闭"
+
+[node name="PrimaryButton" type="Button" parent="UI/GameHUD/Modal" unique_id=2005267628]
+visible = false
+layout_mode = 0
+offset_left = 350.0
+offset_top = 554.0
+offset_right = 530.0
+offset_bottom = 608.0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0.97, 0.84, 0.53, 1)
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleHudPanel")
+theme_override_styles/pressed = SubResource("StyleCirclePressed")
+theme_override_styles/hover = SubResource("StyleCircleHover")
+text = "确定"
+
+[node name="SecondaryButton" type="Button" parent="UI/GameHUD/Modal" unique_id=1693131944]
+visible = false
+layout_mode = 0
+offset_left = 630.0
+offset_top = 554.0
+offset_right = 810.0
+offset_bottom = 608.0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0.84, 0.8, 0.68, 1)
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleHudPanel")
+theme_override_styles/pressed = SubResource("StyleCirclePressed")
+theme_override_styles/hover = SubResource("StyleCircleHover")
+text = "取消"

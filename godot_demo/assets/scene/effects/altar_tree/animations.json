@@ -1,0 +1,47 @@
+{
+  "source": "jitanshu_m.json",
+  "cell": [
+    384,
+    307
+  ],
+  "columns": 8,
+  "fps": 30.0,
+  "supplementary_attachments": [
+    "2",
+    "qp"
+  ],
+  "animations": {
+    "locked": {
+      "source_animation": "1",
+      "duration": 0.0,
+      "frames": 1,
+      "columns": 1,
+      "loop": true,
+      "sheet": "altar-tree-locked.png"
+    },
+    "activate": {
+      "source_animation": "2",
+      "duration": 1.7,
+      "frames": 52,
+      "columns": 8,
+      "loop": false,
+      "sheet": "altar-tree-activate.png"
+    },
+    "ready": {
+      "source_animation": "3",
+      "duration": 1.3333,
+      "frames": 41,
+      "columns": 8,
+      "loop": true,
+      "sheet": "altar-tree-ready.png"
+    },
+    "talked": {
+      "source_animation": "4",
+      "duration": 0.0,
+      "frames": 1,
+      "columns": 1,
+      "loop": true,
+      "sheet": "altar-tree-talked.png"
+    }
+  }
+}

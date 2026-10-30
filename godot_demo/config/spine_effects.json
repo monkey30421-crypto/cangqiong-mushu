@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "effects": [
+    {
+      "file": "chuanson_fuben.spine-json",
+      "label": "副本传送阵",
+      "resource": "res://assets/scene/effects/teleport/chuanson_fuben-data.tres"
+    },
+    {
+      "file": "skilleffect_jd_dg1.json",
+      "label": "单手剑打击特效",
+      "resource": "res://assets/skill_effects/skilleffect_jd_dg1-data.tres"
+    }
+  ]
+}

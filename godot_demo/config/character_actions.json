@@ -1,0 +1,253 @@
+{
+  "version": 1,
+  "revision": 63,
+  "character": "Character.json",
+  "rows": [
+    {
+      "id": 1001,
+      "kind": "basic",
+      "weapon": "单手剑",
+      "group": "单手剑",
+      "action": "待机",
+      "animation": "idle_SingleWeapon",
+      "upper": null,
+      "lower": null
+    },
+    {
+      "id": 1002,
+      "kind": "basic",
+      "weapon": "单手剑",
+      "group": "单手剑",
+      "action": "走路",
+      "animation": "walk1_SingleWeapon",
+      "upper": null,
+      "lower": null
+    },
+    {
+      "id": 1003,
+      "kind": "basic",
+      "weapon": "单手剑",
+      "group": "单手剑",
+      "action": "跑步",
+      "animation": "run_SingleWeapon",
+      "upper": null,
+      "lower": null
+    },
+    {
+      "id": 1004,
+      "kind": "basic",
+      "weapon": "单手剑",
+      "group": "单手剑",
+      "action": "跳跃上升",
+      "animation": "jumpUp_SingleWeapon",
+      "upper": null,
+      "lower": null
+    },
+    {
+      "id": 1005,
+      "kind": "basic",
+      "weapon": "单手剑",
+      "group": "单手剑",
+      "action": "跳跃下落",
+      "animation": "jumpDown_SingleWeapon",
+      "upper": null,
+      "lower": null
+    },
+    {
+      "id": 1006,
+      "kind": "basic",
+      "weapon": "单手剑",
+      "group": "单手剑",
+      "action": "闪避",
+      "animation": "step_SingleWeapon",
+      "upper": null,
+      "lower": null
+    },
+    {
+      "id": 1007,
+      "kind": "basic",
+      "weapon": "单手剑",
+      "group": "单手剑",
+      "action": "受击",
+      "animation": "hit_SingleWeapon2",
+      "upper": null,
+      "lower": null
+    },
+    {
+      "id": 1008,
+      "kind": "basic",
+      "weapon": "单手剑",
+      "group": "单手剑",
+      "action": "原地死亡",
+      "animation": "die_SingleSword",
+      "upper": null,
+      "lower": null
+    },
+    {
+      "id": 1010,
+      "kind": "basic",
+      "weapon": "单手剑",
+      "group": "单手剑",
+      "action": "倒地起身前滚",
+      "animation": "die_front",
+      "upper": null,
+      "lower": null
+    },
+    {
+      "id": 1011,
+      "kind": "basic",
+      "weapon": "单手剑",
+      "group": "单手剑",
+      "action": "倒地起身后滚",
+      "animation": "die_back",
+      "upper": null,
+      "lower": null
+    },
+    {
+      "id": 1012,
+      "kind": "basic",
+      "weapon": "单手剑",
+      "group": "单手剑",
+      "action": "起身",
+      "animation": "die_Up",
+      "upper": null,
+      "lower": null
+    },
+    {
+      "id": 1013,
+      "kind": "basic",
+      "weapon": "单手剑",
+      "group": "单手剑",
+      "action": "击飞中",
+      "animation": "floated",
+      "upper": null,
+      "lower": null
+    },
+    {
+      "id": 1014,
+      "kind": "basic",
+      "weapon": "单手剑",
+      "group": "单手剑",
+      "action": "击飞落地",
+      "animation": "fall_end",
+      "upper": null,
+      "lower": null
+    },
+    {
+      "id": 1015,
+      "kind": "basic",
+      "weapon": "单手剑",
+      "group": "单手剑",
+      "action": "躺地循环",
+      "animation": "die_floated",
+      "upper": null,
+      "lower": null
+    },
+    {
+      "id": 1016,
+      "kind": "basic",
+      "weapon": "单手剑",
+      "group": "单手剑",
+      "action": "跪地循环",
+      "animation": "die_SingleSword",
+      "upper": null,
+      "lower": null
+    },
+    {
+      "id": 2001,
+      "kind": "skill",
+      "weapon": "单手剑",
+      "group": "单手剑-普通攻击",
+      "action": "普通攻击1",
+      "animation": "attack1_SingleSword",
+      "attackDistancePx": 90,
+      "advanceDistancePx": 40,
+      "advanceDurationMs": 100,
+      "longitudinalRangePx": 60,
+      "heightRangePx": 140,
+      "hitStopMs": 200,
+      "upper": {
+        "file": "skilleffect_jd_dg1.json",
+        "animation": "attack1"
+      },
+      "lower": null
+    },
+    {
+      "id": 2002,
+      "kind": "skill",
+      "weapon": "单手剑",
+      "group": "单手剑-普通攻击",
+      "action": "普通攻击2",
+      "animation": "attack2_SingleSword",
+      "attackDistancePx": 90,
+      "advanceDistancePx": 40,
+      "advanceDurationMs": 100,
+      "longitudinalRangePx": 60,
+      "heightRangePx": 140,
+      "hitStopMs": 200,
+      "upper": {
+        "file": "skilleffect_jd_dg1.json",
+        "animation": "attack2"
+      },
+      "lower": null
+    },
+    {
+      "id": 2003,
+      "kind": "skill",
+      "weapon": "单手剑",
+      "group": "单手剑-普通攻击",
+      "action": "普通攻击3",
+      "animation": "attack3_SingleSword",
+      "attackDistancePx": 90,
+      "advanceDistancePx": 40,
+      "advanceDurationMs": 100,
+      "longitudinalRangePx": 60,
+      "heightRangePx": 140,
+      "hitStopMs": 400,
+      "upper": {
+        "file": "skilleffect_jd_dg1.json",
+        "animation": "attack3"
+      },
+      "lower": null
+    },
+    {
+      "id": 2004,
+      "kind": "skill",
+      "weapon": "单手剑",
+      "group": "跳跃攻击",
+      "action": "跳跃攻击",
+      "animation": "jumpAttack_SingleWeapon",
+      "attackDistancePx": 80,
+      "advanceDistancePx": 0,
+      "advanceDurationMs": 0,
+      "longitudinalRangePx": 60,
+      "heightRangePx": 120,
+      "hitStopMs": 200,
+      "upper": {
+        "file": "skilleffect_jd_dg1.json",
+        "animation": "jump_attack1"
+      },
+      "lower": null
+    },
+    {
+      "id": 2005,
+      "kind": "skill",
+      "weapon": "单手剑",
+      "group": "闪避攻击",
+      "action": "闪避攻击",
+      "animation": "stepAttack_SingleWeapon",
+      "attackDistancePx": 80,
+      "advanceDistancePx": 100,
+      "advanceDurationMs": 200,
+      "longitudinalRangePx": 60,
+      "heightRangePx": 140,
+      "hitStopMs": 200,
+      "upper": {
+        "file": "skilleffect_jd_dg1.json",
+        "animation": "step_attack1"
+      },
+      "lower": null
+    }
+  ],
+  "updatedAt": "2026-10-28T15:50:02.744Z"
+}

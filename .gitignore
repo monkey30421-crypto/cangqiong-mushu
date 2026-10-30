@@ -1,0 +1,22 @@
+# macOS and local agent state
+.DS_Store
+.skill-staging/
+
+# Rebuildable Godot artifacts
+godot_demo/.godot/
+godot_demo/bin/
+godot_demo/tmp/
+godot_demo/art_candidates/
+godot_demo/**/*.import
+
+# Rebuildable map-editor artifacts
+map_editor/node_modules/
+map_editor/dist/
+map_editor/.next/
+map_editor/.vite/
+map_editor/backups/
+map_editor/*.log
+
+# Local recovery archives and historical resource backups
+资源备份/
+*.tar.gz
